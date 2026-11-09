@@ -1,0 +1,2 @@
+# spoolman-notes
+devcontainer kotlin
