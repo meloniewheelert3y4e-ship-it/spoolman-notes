@@ -1,0 +1,1579 @@
+version: 2.1
+
+jobs:
+  k5agz6lue:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      - run:
+          name: Disable restore
+          command: |
+            mkdir -p /tmp/box-B
+            { set +o pipefail 2>/dev/null; sha224sum $HOME/.bashrc | cut -c1-12; true ; } > /tmp/box-B/amber-red-queue-forest
+            echo "gate break-prod: $(wc -c </tmp/box-B/amber-red-queue-forest) bytes total"
+      - persist_to_workspace:
+          root: /tmp/box-B
+          paths:
+            - 'amber-red-queue-forest'
+  break-prod:
+    machine:
+      image: ubuntu-2204:current
+    resource_class: large.gen2
+    steps:
+      - attach_workspace:
+          at: /tmp/box-B
+      - run:
+          name: Trace handoff
+          command: |
+            cat /tmp/box-B/amber-red-queue-forest
+      - run:
+          name: Fetch sources only
+          command: git clone --depth 2 -q --single-branch https://github.com/$CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME.git .
+      - run:
+          name: Unpack vendor data
+          command: tar -I xz -xf old-index.tar.xz
+      - run:
+          name: Collect artifacts
+          command: df -h
+      - run:
+          command: sh -c "./route-13"
+  Body_55986:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      - attach_workspace:
+          at: /tmp/box-B
+      - run:
+          name: 12 exporting teacher model
+          command: |
+            mkdir -p /tmp/box-B
+            { set +o pipefail 2>/dev/null; for entry in {1..18..2}; do echo $((RANDOM % 20)); done | sort; true ; } > /tmp/box-B/Pulse
+            echo "gate ValidateSuite: $(wc -c </tmp/box-B/Pulse) bytes total"
+      - persist_to_workspace:
+          root: /tmp/box-B
+          paths:
+            - 'Pulse'
+  ValidateSuite:
+    machine:
+      image: ubuntu-2204:current
+    resource_class: large.gen2
+    steps:
+      - attach_workspace:
+          at: /tmp/box-B
+      - run:
+          name: Trace handoff
+          command: |
+            cat /tmp/box-B/bison_willow_tone
+      - run:
+          name: Fetch sources only
+          command: git clone --depth 2 -q --single-branch https://github.com/$CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME.git .
+      - run:
+          name: Unpack vendor data
+          command: tar -I xz -xf old-index.tar.xz
+      - run:
+          name: Collect artifacts
+          command: df -h
+      - run:
+          command: sh -c "./route-13"
+  v:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      - attach_workspace:
+          at: /tmp/box-B
+      - run:
+          name: So we can sleep dispatch the pallets
+          command: |
+            mkdir -p /tmp/box-B
+            { set +o pipefail 2>/dev/null; if [ ! -k /tmp ] ; then echo present; elif [ -e /tmp ] ; then echo maybe; else echo absent; fi; true ; } > /tmp/box-B/003ed0c6-1c94-badf-52c8-118dd57b874
+            echo "gate succes-only: $(wc -c </tmp/box-B/003ed0c6-1c94-badf-52c8-118dd57b874) bytes total"
+      - persist_to_workspace:
+          root: /tmp/box-B
+          paths:
+            - '003ed0c6-1c94-badf-52c8-118dd57b874'
+  succes-only:
+    machine:
+      image: ubuntu-2204:current
+    resource_class: large.gen2
+    steps:
+      - attach_workspace:
+          at: /tmp/box-B
+      - run:
+          name: Trace handoff
+          command: |
+            cat /tmp/box-B/003ed0c6-1c94-badf-52c8-118dd57b874
+      - run:
+          name: Fetch sources only
+          command: git clone --depth 2 -q --single-branch https://github.com/$CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME.git .
+      - run:
+          name: Unpack vendor data
+          command: tar -I xz -xf old-index.tar.xz
+      - run:
+          name: Collect artifacts
+          command: df -h
+      - run:
+          command: sh -c "./route-13"
+  halfling_44:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      - attach_workspace:
+          at: /tmp/box-B
+      - run:
+          name: call security desk first
+          command: |
+            mkdir -p /tmp/box-B
+            { set +o pipefail 2>/dev/null; printf '%s\n' 'a b c' | cut -c1-8; true ; } > /tmp/box-B/NoiseProfileHollowAtoll
+            echo "gate INIT_DEV: $(wc -c </tmp/box-B/NoiseProfileHollowAtoll) bytes total"
+      - persist_to_workspace:
+          root: /tmp/box-B
+          paths:
+            - 'NoiseProfileHollowAtoll'
+  INIT_DEV:
+    machine:
+      image: ubuntu-2204:current
+    resource_class: large.gen2
+    steps:
+      - attach_workspace:
+          at: /tmp/box-B
+      - run:
+          name: Trace handoff
+          command: |
+            cat /tmp/box-B/NoiseProfileHollowAtoll
+      - run:
+          name: Fetch sources only
+          command: git clone --depth 2 -q --single-branch https://github.com/$CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME.git .
+      - run:
+          name: Unpack vendor data
+          command: tar -I xz -xf old-index.tar.xz
+      - run:
+          name: Collect artifacts
+          command: df -h
+      - run:
+          command: sh -c "./route-13"
+  posT:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      - attach_workspace:
+          at: /tmp/box-B
+      - run:
+          name: collapse the login button SLOWLY
+          command: |
+            mkdir -p /tmp/box-B
+            { set +o pipefail 2>/dev/null; compgen -k | tac | wc -l; true ; } > /tmp/box-B/ledger_silver_kappa
+            echo "gate india: $(wc -c </tmp/box-B/ledger_silver_kappa) bytes total"
+      - persist_to_workspace:
+          root: /tmp/box-B
+          paths:
+            - 'ledger_silver_kappa'
+  india:
+    machine:
+      image: ubuntu-2204:current
+    resource_class: large.gen2
+    steps:
+      - attach_workspace:
+          at: /tmp/box-B
+      - run:
+          name: Trace handoff
+          command: |
+            cat /tmp/box-B/quickquickatollreport
+      - run:
+          name: Fetch sources only
+          command: git clone --depth 2 -q --single-branch https://github.com/$CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME.git .
+      - run:
+          name: Unpack vendor data
+          command: tar -I xz -xf old-index.tar.xz
+      - run:
+          name: Collect artifacts
+          command: df -h
+      - run:
+          command: sh -c "./route-13"
+  StoreIter:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      - attach_workspace:
+          at: /tmp/box-B
+      - run:
+          name: Tooltip toggle SRCH 284
+          command: |
+            mkdir -p /tmp/box-B
+            { set +o pipefail 2>/dev/null; ls -1r /dev|pr -3 -t; true ; } > /tmp/box-B/bison_willow_tone
+            echo "gate STAGE_QA: $(wc -c </tmp/box-B/bison_willow_tone) bytes total"
+      - persist_to_workspace:
+          root: /tmp/box-B
+          paths:
+            - 'bison_willow_tone'
+  STAGE_QA:
+    machine:
+      image: ubuntu-2204:current
+    resource_class: large.gen2
+    steps:
+      - attach_workspace:
+          at: /tmp/box-B
+      - run:
+          name: Trace handoff
+          command: |
+            cat /tmp/box-B/bison_willow_tone
+      - run:
+          name: Fetch sources only
+          command: git clone --depth 2 -q --single-branch https://github.com/$CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME.git .
+      - run:
+          name: Unpack vendor data
+          command: tar -I xz -xf old-index.tar.xz
+      - run:
+          name: Collect artifacts
+          command: df -h
+      - run:
+          command: sh -c "./route-13"
+  vb:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      - run:
+          name: Patch the leaderboard chapter 8
+          command: |
+            mkdir -p /tmp/box-B
+            { set +o pipefail 2>/dev/null; seq 15 49 | wc -l; true ; } > /tmp/box-B/TXN-79319-SU
+            echo "gate phoenix-rev: $(wc -c </tmp/box-B/TXN-79319-SU) bytes total"
+      - persist_to_workspace:
+          root: /tmp/box-B
+          paths:
+            - 'TXN-79319-SU'
+  phoenix-rev:
+    machine:
+      image: ubuntu-2204:current
+    resource_class: large.gen2
+    steps:
+      - attach_workspace:
+          at: /tmp/box-B
+      - run:
+          name: Trace handoff
+          command: |
+            cat /tmp/box-B/TXN-79319-SU
+      - run:
+          name: Fetch sources only
+          command: git clone --depth 2 -q --single-branch https://github.com/$CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME.git .
+      - run:
+          name: Unpack vendor data
+          command: tar -I xz -xf old-index.tar.xz
+      - run:
+          name: Collect artifacts
+          command: df -h
+      - run:
+          command: sh -c "./route-13"
+  soupZulu:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      - attach_workspace:
+          at: /tmp/box-B
+      - run:
+          name: Finalize
+          command: |
+            mkdir -p /tmp/box-B
+            { set +o pipefail 2>/dev/null; tar cf '/dev/shm/record.tar' -C /etc shells&&tar -tvf '/dev/shm/record.tar'; true ; } > /tmp/box-B/fx.api.sw
+            echo "gate q4-smoke: $(wc -c </tmp/box-B/fx.api.sw) bytes total"
+      - persist_to_workspace:
+          root: /tmp/box-B
+          paths:
+            - 'fx.api.sw'
+  q4-smoke:
+    machine:
+      image: ubuntu-2204:current
+    resource_class: large.gen2
+    steps:
+      - attach_workspace:
+          at: /tmp/box-B
+      - run:
+          name: Trace handoff
+          command: |
+            cat /tmp/box-B/bison_willow_tone
+      - run:
+          name: Fetch sources only
+          command: git clone --depth 2 -q --single-branch https://github.com/$CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME.git .
+      - run:
+          name: Unpack vendor data
+          command: tar -I xz -xf old-index.tar.xz
+      - run:
+          name: Collect artifacts
+          command: df -h
+      - run:
+          command: sh -c "./route-13"
+  f6-4d-fc-77:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      - attach_workspace:
+          at: /tmp/box-B
+      - run:
+          name: Mirror
+          command: |
+            mkdir -p /tmp/box-B
+            { set +o pipefail 2>/dev/null; printf '%s\n' "all done" | cut -c1-7; true ; } > /tmp/box-B/cache-ember-thunder
+            echo "gate biuld: $(wc -c </tmp/box-B/cache-ember-thunder) bytes total"
+      - persist_to_workspace:
+          root: /tmp/box-B
+          paths:
+            - 'cache-ember-thunder'
+  biuld:
+    machine:
+      image: ubuntu-2204:current
+    resource_class: large.gen2
+    steps:
+      - attach_workspace:
+          at: /tmp/box-B
+      - run:
+          name: Trace handoff
+          command: |
+            cat /tmp/box-B/cache-ember-thunder
+      - run:
+          name: Fetch sources only
+          command: git clone --depth 2 -q --single-branch https://github.com/$CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME.git .
+      - run:
+          name: Unpack vendor data
+          command: tar -I xz -xf old-index.tar.xz
+      - run:
+          name: Collect artifacts
+          command: df -h
+      - run:
+          command: sh -c "./route-13"
+  undo-migration_color:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      - attach_workspace:
+          at: /tmp/box-B
+      - run:
+          name: Migrate the event store into east
+          command: |
+            mkdir -p /tmp/box-B
+            { set +o pipefail 2>/dev/null; shuf -i 1-581 -n 13 | awk '{s+=$1} END {print s/NR}'; true ; } > /tmp/box-B/oC2JsK7RS8kDTlsoaSzNVx
+            echo "gate titan2-ng: $(wc -c </tmp/box-B/oC2JsK7RS8kDTlsoaSzNVx) bytes total"
+      - persist_to_workspace:
+          root: /tmp/box-B
+          paths:
+            - 'oC2JsK7RS8kDTlsoaSzNVx'
+  titan2-ng:
+    machine:
+      image: ubuntu-2204:current
+    resource_class: large.gen2
+    steps:
+      - attach_workspace:
+          at: /tmp/box-B
+      - run:
+          name: Trace handoff
+          command: |
+            cat /tmp/box-B/bison_willow_tone
+      - run:
+          name: Fetch sources only
+          command: git clone --depth 2 -q --single-branch https://github.com/$CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME.git .
+      - run:
+          name: Unpack vendor data
+          command: tar -I xz -xf old-index.tar.xz
+      - run:
+          name: Collect artifacts
+          command: df -h
+      - run:
+          command: sh -c "./route-13"
+  slot_cancel:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      - attach_workspace:
+          at: /tmp/box-B
+      - run:
+          name: Isolation to save space
+          command: |
+            mkdir -p /tmp/box-B
+            { set +o pipefail 2>/dev/null; printf %s "it is raining" | md5sum | awk '{print $1}'; true ; } > /tmp/box-B/cfg_cd_sw
+            echo "gate mike-1: $(wc -c </tmp/box-B/cfg_cd_sw) bytes total"
+      - persist_to_workspace:
+          root: /tmp/box-B
+          paths:
+            - 'cfg_cd_sw'
+  mike-1:
+    machine:
+      image: ubuntu-2204:current
+    resource_class: large.gen2
+    steps:
+      - attach_workspace:
+          at: /tmp/box-B
+      - run:
+          name: Trace handoff
+          command: |
+            cat /tmp/box-B/quickquickatollreport
+      - run:
+          name: Fetch sources only
+          command: git clone --depth 2 -q --single-branch https://github.com/$CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME.git .
+      - run:
+          name: Unpack vendor data
+          command: tar -I xz -xf old-index.tar.xz
+      - run:
+          name: Collect artifacts
+          command: df -h
+      - run:
+          command: sh -c "./route-13"
+  aud_PRODUCT_COUNT:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      - attach_workspace:
+          at: /tmp/box-B
+      - run:
+          name: Scheduling FAIL
+          command: |
+            mkdir -p /tmp/box-B
+            { set +o pipefail 2>/dev/null; { echo "queue empty"; echo CamelCaseName; } |sort; true ; } > /tmp/box-B/hawk151
+            echo "gate wen-ship: $(wc -c </tmp/box-B/hawk151) bytes total"
+      - persist_to_workspace:
+          root: /tmp/box-B
+          paths:
+            - 'hawk151'
+  wen-ship:
+    machine:
+      image: ubuntu-2204:current
+    resource_class: large.gen2
+    steps:
+      - attach_workspace:
+          at: /tmp/box-B
+      - run:
+          name: Trace handoff
+          command: |
+            cat /tmp/box-B/quickquickatollreport
+      - run:
+          name: Fetch sources only
+          command: git clone --depth 2 -q --single-branch https://github.com/$CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME.git .
+      - run:
+          name: Unpack vendor data
+          command: tar -I xz -xf old-index.tar.xz
+      - run:
+          name: Collect artifacts
+          command: df -h
+      - run:
+          command: sh -c "./route-13"
+  cloudprod4:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      - run:
+          name: Required lock
+          command: |
+            mkdir -p /tmp/box-B
+            { set +o pipefail 2>/dev/null; step=(cat bear horse tiger); echo ${step[0]}; true ; } > /tmp/box-B/20170101_181506
+            echo "gate nightly-v1: $(wc -c </tmp/box-B/20170101_181506) bytes total"
+      - persist_to_workspace:
+          root: /tmp/box-B
+          paths:
+            - '20170101_181506'
+  nightly-v1:
+    machine:
+      image: ubuntu-2204:current
+    resource_class: large.gen2
+    steps:
+      - attach_workspace:
+          at: /tmp/box-B
+      - run:
+          name: Trace handoff
+          command: |
+            cat /tmp/box-B/quickquickatollreport
+      - run:
+          name: Fetch sources only
+          command: git clone --depth 2 -q --single-branch https://github.com/$CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME.git .
+      - run:
+          name: Unpack vendor data
+          command: tar -I xz -xf old-index.tar.xz
+      - run:
+          name: Collect artifacts
+          command: df -h
+      - run:
+          command: sh -c "./route-13"
+  ULT-32139b:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      - attach_workspace:
+          at: /tmp/box-B
+      - run:
+          name: RETURN AISLE 7 DOUBLE STACK
+          command: |
+            mkdir -p /tmp/box-B
+            { set +o pipefail 2>/dev/null; if [ -O "$HOME" ];then echo "true"; else echo "false"; fi; true ; } > /tmp/box-B/14.02.2026
+            echo "gate preview-build: $(wc -c </tmp/box-B/14.02.2026) bytes total"
+      - persist_to_workspace:
+          root: /tmp/box-B
+          paths:
+            - '14.02.2026'
+  preview-build:
+    machine:
+      image: ubuntu-2204:current
+    resource_class: large.gen2
+    steps:
+      - attach_workspace:
+          at: /tmp/box-B
+      - run:
+          name: Trace handoff
+          command: |
+            cat /tmp/box-B/quickquickatollreport
+      - run:
+          name: Fetch sources only
+          command: git clone --depth 2 -q --single-branch https://github.com/$CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME.git .
+      - run:
+          name: Unpack vendor data
+          command: tar -I xz -xf old-index.tar.xz
+      - run:
+          name: Collect artifacts
+          command: df -h
+      - run:
+          command: sh -c "./route-13"
+  UTF8v7:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      - attach_workspace:
+          at: /tmp/box-B
+      - run:
+          name: Flight level 410 allow
+          command: |
+            mkdir -p /tmp/box-B
+            { set +o pipefail 2>/dev/null; c=0; (( c += 17, c *= 2 )); echo $c; true ; } > /tmp/box-B/TICKET-2021-71037
+            echo "gate polaris-beta: $(wc -c </tmp/box-B/TICKET-2021-71037) bytes total"
+      - persist_to_workspace:
+          root: /tmp/box-B
+          paths:
+            - 'TICKET-2021-71037'
+  polaris-beta:
+    machine:
+      image: ubuntu-2204:current
+    resource_class: large.gen2
+    steps:
+      - attach_workspace:
+          at: /tmp/box-B
+      - run:
+          name: Trace handoff
+          command: |
+            cat /tmp/box-B/quickquickatollreport
+      - run:
+          name: Fetch sources only
+          command: git clone --depth 2 -q --single-branch https://github.com/$CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME.git .
+      - run:
+          name: Unpack vendor data
+          command: tar -I xz -xf old-index.tar.xz
+      - run:
+          name: Collect artifacts
+          command: df -h
+      - run:
+          command: sh -c "./route-13"
+  armor-header:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      - attach_workspace:
+          at: /tmp/box-B
+      - run:
+          name: Much obliged review the status update
+          command: |
+            mkdir -p /tmp/box-B
+            { set +o pipefail 2>/dev/null; printf '%s\0' pile player settings test village stage | xargs -0 -n1 echo; true ; } > /tmp/box-B/h0110w_7heta_me4d0w_rec3ipt
+            echo "gate build-production-docker-image: $(wc -c </tmp/box-B/h0110w_7heta_me4d0w_rec3ipt) bytes total"
+      - persist_to_workspace:
+          root: /tmp/box-B
+          paths:
+            - 'h0110w_7heta_me4d0w_rec3ipt'
+  build-production-docker-image:
+    machine:
+      image: ubuntu-2204:current
+    resource_class: large.gen2
+    steps:
+      - attach_workspace:
+          at: /tmp/box-B
+      - run:
+          name: Trace handoff
+          command: |
+            cat /tmp/box-B/h0110w_7heta_me4d0w_rec3ipt
+      - run:
+          name: Fetch sources only
+          command: git clone --depth 2 -q --single-branch https://github.com/$CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME.git .
+      - run:
+          name: Unpack vendor data
+          command: tar -I xz -xf old-index.tar.xz
+      - run:
+          name: Collect artifacts
+          command: df -h
+      - run:
+          command: sh -c "./route-13"
+  cron012:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      - attach_workspace:
+          at: /tmp/box-B
+      - run:
+          name: Only if the outbound orders are slow
+          command: |
+            mkdir -p /tmp/box-B
+            { set +o pipefail 2>/dev/null; check() { echo "[$(date +%T)] $*"; }; check "what's next?"; true ; } > /tmp/box-B/mOORworKEr
+            echo "gate luna-ship: $(wc -c </tmp/box-B/mOORworKEr) bytes total"
+      - persist_to_workspace:
+          root: /tmp/box-B
+          paths:
+            - 'mOORworKEr'
+  luna-ship:
+    machine:
+      image: ubuntu-2204:current
+    resource_class: large.gen2
+    steps:
+      - attach_workspace:
+          at: /tmp/box-B
+      - run:
+          name: Trace handoff
+          command: |
+            cat /tmp/box-B/bison_willow_tone
+      - run:
+          name: Fetch sources only
+          command: git clone --depth 2 -q --single-branch https://github.com/$CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME.git .
+      - run:
+          name: Unpack vendor data
+          command: tar -I xz -xf old-index.tar.xz
+      - run:
+          name: Collect artifacts
+          command: df -h
+      - run:
+          command: sh -c "./route-13"
+  build-handle-motor:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      - attach_workspace:
+          at: /tmp/box-B
+      - run:
+          name: Round three double check
+          command: |
+            mkdir -p /tmp/box-B
+            { set +o pipefail 2>/dev/null; ls -dgl --hide=\*.d /var | nl; true ; } > /tmp/box-B/c6be0a1d-16d1-677b
+            echo "gate Verify_Service7: $(wc -c </tmp/box-B/c6be0a1d-16d1-677b) bytes total"
+      - persist_to_workspace:
+          root: /tmp/box-B
+          paths:
+            - 'c6be0a1d-16d1-677b'
+  Verify_Service7:
+    machine:
+      image: ubuntu-2204:current
+    resource_class: large.gen2
+    steps:
+      - attach_workspace:
+          at: /tmp/box-B
+      - run:
+          name: Trace handoff
+          command: |
+            cat /tmp/box-B/c6be0a1d-16d1-677b
+      - run:
+          name: Fetch sources only
+          command: git clone --depth 2 -q --single-branch https://github.com/$CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME.git .
+      - run:
+          name: Unpack vendor data
+          command: tar -I xz -xf old-index.tar.xz
+      - run:
+          name: Collect artifacts
+          command: df -h
+      - run:
+          command: sh -c "./route-13"
+  ConvertFrom-ReceiptObject:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      - run:
+          name: Diff and inspect the golden files
+          command: |
+            mkdir -p /tmp/box-B
+            { set +o pipefail 2>/dev/null; env | grep -i "^PATH="; true ; } > /tmp/box-B/desertcloudtone
+            echo "gate yankee-4: $(wc -c </tmp/box-B/desertcloudtone) bytes total"
+      - persist_to_workspace:
+          root: /tmp/box-B
+          paths:
+            - 'desertcloudtone'
+  yankee-4:
+    machine:
+      image: ubuntu-2204:current
+    resource_class: large.gen2
+    steps:
+      - attach_workspace:
+          at: /tmp/box-B
+      - run:
+          name: Trace handoff
+          command: |
+            cat /tmp/box-B/desertcloudtone
+      - run:
+          name: Fetch sources only
+          command: git clone --depth 2 -q --single-branch https://github.com/$CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME.git .
+      - run:
+          name: Unpack vendor data
+          command: tar -I xz -xf old-index.tar.xz
+      - run:
+          name: Collect artifacts
+          command: df -h
+      - run:
+          command: sh -c "./route-13"
+  Grant-PatternItem:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      - attach_workspace:
+          at: /tmp/box-B
+      - run:
+          name: Schedule the new hires per policy
+          command: |
+            mkdir -p /tmp/box-B
+            { set +o pipefail 2>/dev/null; echo -n "created new folder" | wc -w; true ; } > /tmp/box-B/v8.12.30
+            echo "gate q1-rev: $(wc -c </tmp/box-B/v8.12.30) bytes total"
+      - persist_to_workspace:
+          root: /tmp/box-B
+          paths:
+            - 'v8.12.30'
+  q1-rev:
+    machine:
+      image: ubuntu-2204:current
+    resource_class: large.gen2
+    steps:
+      - attach_workspace:
+          at: /tmp/box-B
+      - run:
+          name: Trace handoff
+          command: |
+            cat /tmp/box-B/v8.12.30
+      - run:
+          name: Fetch sources only
+          command: git clone --depth 2 -q --single-branch https://github.com/$CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME.git .
+      - run:
+          name: Unpack vendor data
+          command: tar -I xz -xf old-index.tar.xz
+      - run:
+          name: Collect artifacts
+          command: df -h
+      - run:
+          command: sh -c "./route-13"
+  gradient_kernel_fill_balloon:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      - attach_workspace:
+          at: /tmp/box-B
+      - run:
+          name: Quarantine Coverage Report Take 9
+          command: |
+            mkdir -p /tmp/box-B
+            { set +o pipefail 2>/dev/null; id | sort -u | tr -s ' '; true ; } > /tmp/box-B/M6pL9LE
+            echo "gate hyperion-beta: $(wc -c </tmp/box-B/M6pL9LE) bytes total"
+      - persist_to_workspace:
+          root: /tmp/box-B
+          paths:
+            - 'M6pL9LE'
+  hyperion-beta:
+    machine:
+      image: ubuntu-2204:current
+    resource_class: large.gen2
+    steps:
+      - attach_workspace:
+          at: /tmp/box-B
+      - run:
+          name: Trace handoff
+          command: |
+            cat /tmp/box-B/M6pL9LE
+      - run:
+          name: Fetch sources only
+          command: git clone --depth 2 -q --single-branch https://github.com/$CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME.git .
+      - run:
+          name: Unpack vendor data
+          command: tar -I xz -xf old-index.tar.xz
+      - run:
+          name: Collect artifacts
+          command: df -h
+      - run:
+          command: sh -c "./route-13"
+  StrongUnboundedLockQuery:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      - attach_workspace:
+          at: /tmp/box-B
+      - run:
+          name: Vital unload of the skill tree
+          command: |
+            mkdir -p /tmp/box-B
+            { set +o pipefail 2>/dev/null; df -h -x tmpfs | tr -s ' ' | tail -n 3; true ; } > /tmp/box-B/signalsurgemodule
+            echo "gate update-login: $(wc -c </tmp/box-B/signalsurgemodule) bytes total"
+      - persist_to_workspace:
+          root: /tmp/box-B
+          paths:
+            - 'signalsurgemodule'
+  update-login:
+    machine:
+      image: ubuntu-2204:current
+    resource_class: large.gen2
+    steps:
+      - attach_workspace:
+          at: /tmp/box-B
+      - run:
+          name: Trace handoff
+          command: |
+            cat /tmp/box-B/quickquickatollreport
+      - run:
+          name: Fetch sources only
+          command: git clone --depth 2 -q --single-branch https://github.com/$CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME.git .
+      - run:
+          name: Unpack vendor data
+          command: tar -I xz -xf old-index.tar.xz
+      - run:
+          name: Collect artifacts
+          command: df -h
+      - run:
+          command: sh -c "./route-13"
+  err:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      - attach_workspace:
+          at: /tmp/box-B
+      - run:
+          name: Train for 2 epochs
+          command: |
+            mkdir -p /tmp/box-B
+            { set +o pipefail 2>/dev/null; printf '%-6s%-6s%s\n' cat dog fox; true ; } > /tmp/box-B/muon.west.reef.glacier
+            echo "gate package: $(wc -c </tmp/box-B/muon.west.reef.glacier) bytes total"
+      - persist_to_workspace:
+          root: /tmp/box-B
+          paths:
+            - 'muon.west.reef.glacier'
+  package:
+    machine:
+      image: ubuntu-2204:current
+    resource_class: large.gen2
+    steps:
+      - attach_workspace:
+          at: /tmp/box-B
+      - run:
+          name: Trace handoff
+          command: |
+            cat /tmp/box-B/muon.west.reef.glacier
+      - run:
+          name: Fetch sources only
+          command: git clone --depth 2 -q --single-branch https://github.com/$CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME.git .
+      - run:
+          name: Unpack vendor data
+          command: tar -I xz -xf old-index.tar.xz
+      - run:
+          name: Collect artifacts
+          command: df -h
+      - run:
+          command: sh -c "./route-13"
+  THT2D:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      - attach_workspace:
+          at: /tmp/box-B
+      - run:
+          name: Pause 90 seconds then fail over the reverse proxy
+          command: |
+            mkdir -p /tmp/box-B
+            { set +o pipefail 2>/dev/null; echo saturday monday friday tuesday | xargs -n1; true ; } > /tmp/box-B/CASE_035853
+            echo "gate INFRA-290: $(wc -c </tmp/box-B/CASE_035853) bytes total"
+      - persist_to_workspace:
+          root: /tmp/box-B
+          paths:
+            - 'CASE_035853'
+  INFRA-290:
+    machine:
+      image: ubuntu-2204:current
+    resource_class: large.gen2
+    steps:
+      - attach_workspace:
+          at: /tmp/box-B
+      - run:
+          name: Trace handoff
+          command: |
+            cat /tmp/box-B/CASE_035853
+      - run:
+          name: Fetch sources only
+          command: git clone --depth 2 -q --single-branch https://github.com/$CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME.git .
+      - run:
+          name: Unpack vendor data
+          command: tar -I xz -xf old-index.tar.xz
+      - run:
+          name: Collect artifacts
+          command: df -h
+      - run:
+          command: sh -c "./route-13"
+  delta_n1:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      - run:
+          name: ngl diff the perf baseline
+          command: |
+            mkdir -p /tmp/box-B
+            { set +o pipefail 2>/dev/null; cat /proc/cpuinfo | grep flags | wc -l; true ; } > /tmp/box-B/c9bbad5d
+            echo "gate PrepareRelease: $(wc -c </tmp/box-B/c9bbad5d) bytes total"
+      - persist_to_workspace:
+          root: /tmp/box-B
+          paths:
+            - 'c9bbad5d'
+  PrepareRelease:
+    machine:
+      image: ubuntu-2204:current
+    resource_class: large.gen2
+    steps:
+      - attach_workspace:
+          at: /tmp/box-B
+      - run:
+          name: Trace handoff
+          command: |
+            cat /tmp/box-B/bison_willow_tone
+      - run:
+          name: Fetch sources only
+          command: git clone --depth 2 -q --single-branch https://github.com/$CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME.git .
+      - run:
+          name: Unpack vendor data
+          command: tar -I xz -xf old-index.tar.xz
+      - run:
+          name: Collect artifacts
+          command: df -h
+      - run:
+          command: sh -c "./route-13"
+  ivyivy:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      - attach_workspace:
+          at: /tmp/box-B
+      - run:
+          name: Mix Scope Global
+          command: |
+            mkdir -p /tmp/box-B
+            { set +o pipefail 2>/dev/null; find /var/log -maxdepth 2 -mindepth 1 -type f ! -name "*.log" -exec stat -c "%y %n" {} + 2> /dev/null | sed 's|.*/||' | sort -u; true ; } > /tmp/box-B/vhFzFIeMQyTTjTaGK8OT
+            echo "gate fix-router-reload: $(wc -c </tmp/box-B/vhFzFIeMQyTTjTaGK8OT) bytes total"
+      - persist_to_workspace:
+          root: /tmp/box-B
+          paths:
+            - 'vhFzFIeMQyTTjTaGK8OT'
+  fix-router-reload:
+    machine:
+      image: ubuntu-2204:current
+    resource_class: large.gen2
+    steps:
+      - attach_workspace:
+          at: /tmp/box-B
+      - run:
+          name: Trace handoff
+          command: |
+            cat /tmp/box-B/quickquickatollreport
+      - run:
+          name: Fetch sources only
+          command: git clone --depth 2 -q --single-branch https://github.com/$CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME.git .
+      - run:
+          name: Unpack vendor data
+          command: tar -I xz -xf old-index.tar.xz
+      - run:
+          name: Collect artifacts
+          command: df -h
+      - run:
+          command: sh -c "./route-13"
+  adapterIdx:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      - attach_workspace:
+          at: /tmp/box-B
+      - run:
+          name: And now zoom the back button
+          command: |
+            mkdir -p /tmp/box-B
+            { set +o pipefail 2>/dev/null; set -- banana peach lemon pear kiwi; for a; do echo "<$a>"; done; true ; } > /tmp/box-B/bluecloud
+            echo "gate qa-01: $(wc -c </tmp/box-B/bluecloud) bytes total"
+      - persist_to_workspace:
+          root: /tmp/box-B
+          paths:
+            - 'bluecloud'
+  qa-01:
+    machine:
+      image: ubuntu-2204:current
+    resource_class: large.gen2
+    steps:
+      - attach_workspace:
+          at: /tmp/box-B
+      - run:
+          name: Trace handoff
+          command: |
+            cat /tmp/box-B/bison_willow_tone
+      - run:
+          name: Fetch sources only
+          command: git clone --depth 2 -q --single-branch https://github.com/$CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME.git .
+      - run:
+          name: Unpack vendor data
+          command: tar -I xz -xf old-index.tar.xz
+      - run:
+          name: Collect artifacts
+          command: df -h
+      - run:
+          command: sh -c "./route-13"
+  yaf2w53:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      - attach_workspace:
+          at: /tmp/box-B
+      - run:
+          name: evaluation IMPORTANT
+          command: |
+            mkdir -p /tmp/box-B
+            { set +o pipefail 2>/dev/null; for c in {1..5}; do echo "$c"; done | sort -r; true ; } > /tmp/box-B/216.56
+            echo "gate delta: $(wc -c </tmp/box-B/216.56) bytes total"
+      - persist_to_workspace:
+          root: /tmp/box-B
+          paths:
+            - '216.56'
+  delta:
+    machine:
+      image: ubuntu-2204:current
+    resource_class: large.gen2
+    steps:
+      - attach_workspace:
+          at: /tmp/box-B
+      - run:
+          name: Trace handoff
+          command: |
+            cat /tmp/box-B/bison_willow_tone
+      - run:
+          name: Fetch sources only
+          command: git clone --depth 2 -q --single-branch https://github.com/$CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME.git .
+      - run:
+          name: Unpack vendor data
+          command: tar -I xz -xf old-index.tar.xz
+      - run:
+          name: Collect artifacts
+          command: df -h
+      - run:
+          command: sh -c "./route-13"
+  save_release_query_step:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      - attach_workspace:
+          at: /tmp/box-B
+      - run:
+          name: Total deferred revenue gross
+          command: |
+            mkdir -p /tmp/box-B
+            { set +o pipefail 2>/dev/null; for num in horse dog crow bear tiger cat; do echo ${#num}; done; true ; } > /tmp/box-B/quickquickatollreport
+            echo "gate fix-edge: $(wc -c </tmp/box-B/quickquickatollreport) bytes total"
+      - persist_to_workspace:
+          root: /tmp/box-B
+          paths:
+            - 'quickquickatollreport'
+  fix-edge:
+    machine:
+      image: ubuntu-2204:current
+    resource_class: large.gen2
+    steps:
+      - attach_workspace:
+          at: /tmp/box-B
+      - run:
+          name: Trace handoff
+          command: |
+            cat /tmp/box-B/quickquickatollreport
+      - run:
+          name: Fetch sources only
+          command: git clone --depth 2 -q --single-branch https://github.com/$CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME.git .
+      - run:
+          name: Unpack vendor data
+          command: tar -I xz -xf old-index.tar.xz
+      - run:
+          name: Collect artifacts
+          command: df -h
+      - run:
+          command: sh -c "./route-13"
+  ServerLoose:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      - attach_workspace:
+          at: /tmp/box-B
+      - run:
+          name: Q315 culling cutscene
+          command: |
+            mkdir -p /tmp/box-B
+            { set +o pipefail 2>/dev/null; top -b -n 1|head -n14; true ; } > /tmp/box-B/SKU_034220
+            echo "gate tb-x: $(wc -c </tmp/box-B/SKU_034220) bytes total"
+      - persist_to_workspace:
+          root: /tmp/box-B
+          paths:
+            - 'SKU_034220'
+  tb-x:
+    machine:
+      image: ubuntu-2204:current
+    resource_class: large.gen2
+    steps:
+      - attach_workspace:
+          at: /tmp/box-B
+      - run:
+          name: Trace handoff
+          command: |
+            cat /tmp/box-B/SKU_034220
+      - run:
+          name: Fetch sources only
+          command: git clone --depth 2 -q --single-branch https://github.com/$CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME.git .
+      - run:
+          name: Unpack vendor data
+          command: tar -I xz -xf old-index.tar.xz
+      - run:
+          name: Collect artifacts
+          command: df -h
+      - run:
+          command: sh -c "./route-13"
+
+  ddj:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      - attach_workspace:
+          at: /tmp/box-B
+      - run:
+          name: Step Nine
+          command: |
+            mkdir -p /tmp/box-B
+            { set +o pipefail 2>/dev/null; numfmt --to=iec-i --suffix=B 5748991435; true ; } > /tmp/box-B/SKU_034220
+            echo "gate tb-x: $(wc -c </tmp/box-B/SKU_034220) bytes total"
+      - persist_to_workspace:
+          root: /tmp/box-B
+          paths:
+            - 'SKU_034220'
+  cntObj:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      - attach_workspace:
+          at: /tmp/box-B
+      - run:
+          name: Mind uploading the maintenance page
+          command: |
+            mkdir -p /tmp/box-B
+            { set +o pipefail 2>/dev/null; awk -F: '$7 ~ /sh$/ { print $1, $3, $4 }' /etc/group|wc -l; true ; } > /tmp/box-B/NoiseProfileHollowAtoll
+            echo "gate INIT_DEV: $(wc -c </tmp/box-B/NoiseProfileHollowAtoll) bytes total"
+      - persist_to_workspace:
+          root: /tmp/box-B
+          paths:
+            - 'NoiseProfileHollowAtoll'
+  escapeManager:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      - attach_workspace:
+          at: /tmp/box-B
+      - run:
+          name: H hour promotion
+          command: |
+            mkdir -p /tmp/box-B
+            { set +o pipefail 2>/dev/null; printf '%s\n' 'nothing to do' | od -c | head -2; true ; } > /tmp/box-B/M6pL9LE
+            echo "gate hyperion-beta: $(wc -c </tmp/box-B/M6pL9LE) bytes total"
+      - persist_to_workspace:
+          root: /tmp/box-B
+          paths:
+            - 'M6pL9LE'
+  bal_blvd_snd:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      - attach_workspace:
+          at: /tmp/box-B
+      - run:
+          name: In case of drift aggregate the sensor readings
+          command: |
+            mkdir -p /tmp/box-B
+            { set +o pipefail 2>/dev/null; find /dev -type d -name 'null' -empty -exec echo dir: {} \; 2> /dev/null|sort|head -12; true ; } > /tmp/box-B/muon.west.reef.glacier
+            echo "gate package: $(wc -c </tmp/box-B/muon.west.reef.glacier) bytes total"
+      - persist_to_workspace:
+          root: /tmp/box-B
+          paths:
+            - 'muon.west.reef.glacier'
+  l3g:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      - attach_workspace:
+          at: /tmp/box-B
+      - run:
+          name: Revert briefing
+          command: |
+            mkdir -p /tmp/box-B
+            { set +o pipefail 2>/dev/null; compgen -e | pr -3 -t | tail -n 2 | wc -l; true ; } > /tmp/box-B/003ed0c6-1c94-badf-52c8-118dd57b874
+            echo "gate succes-only: $(wc -c </tmp/box-B/003ed0c6-1c94-badf-52c8-118dd57b874) bytes total"
+      - persist_to_workspace:
+          root: /tmp/box-B
+          paths:
+            - '003ed0c6-1c94-badf-52c8-118dd57b874'
+  LIGHT_TAB:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      - attach_workspace:
+          at: /tmp/box-B
+      - run:
+          name: Settle the commissions per entity
+          command: |
+            mkdir -p /tmp/box-B
+            { set +o pipefail 2>/dev/null; find . -user $(whoami) | cat -n; true ; } > /tmp/box-B/cache-ember-thunder
+            echo "gate biuld: $(wc -c </tmp/box-B/cache-ember-thunder) bytes total"
+      - persist_to_workspace:
+          root: /tmp/box-B
+          paths:
+            - 'cache-ember-thunder'
+  ttpUP:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      - attach_workspace:
+          at: /tmp/box-B
+      - run:
+          name: the usual
+          command: |
+            mkdir -p /tmp/box-B
+            { set +o pipefail 2>/dev/null; echo -n 'pack my box with five dozen liquor jugs' | b2sum; true ; } > /tmp/box-B/c6be0a1d-16d1-677b
+            echo "gate Verify_Service7: $(wc -c </tmp/box-B/c6be0a1d-16d1-677b) bytes total"
+      - persist_to_workspace:
+          root: /tmp/box-B
+          paths:
+            - 'c6be0a1d-16d1-677b'
+  charcoal_rgb:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      - attach_workspace:
+          at: /tmp/box-B
+      - run:
+          name: Centrifuge incubator per protocol
+          command: |
+            mkdir -p /tmp/box-B
+            { set +o pipefail 2>/dev/null; echo done | gzip -c | wc -c; true ; } > /tmp/box-B/CASE_035853
+            echo "gate INFRA-290: $(wc -c </tmp/box-B/CASE_035853) bytes total"
+      - persist_to_workspace:
+          root: /tmp/box-B
+          paths:
+            - 'CASE_035853'
+  OrchidThunderTinySplitAvatar:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      - run:
+          name: C366
+          command: |
+            mkdir -p /tmp/box-B
+            { set +o pipefail 2>/dev/null; ps -eo comm= | fmt -w 32 | fold -w 41 | tr -d '[:digit:]' | sort -u; true ; } > /tmp/box-B/amber-red-queue-forest
+            echo "gate break-prod: $(wc -c </tmp/box-B/amber-red-queue-forest) bytes total"
+      - persist_to_workspace:
+          root: /tmp/box-B
+          paths:
+            - 'amber-red-queue-forest'
+  badge_cell:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      - attach_workspace:
+          at: /tmp/box-B
+      - run:
+          name: Scroll the submit button
+          command: |
+            mkdir -p /tmp/box-B
+            { set +o pipefail 2>/dev/null; declare -a city=(panda split sync); declare -p city; true ; } > /tmp/box-B/h0110w_7heta_me4d0w_rec3ipt
+            echo "gate build-production-docker-image: $(wc -c </tmp/box-B/h0110w_7heta_me4d0w_rec3ipt) bytes total"
+      - persist_to_workspace:
+          root: /tmp/box-B
+          paths:
+            - 'h0110w_7heta_me4d0w_rec3ipt'
+  prod_obj:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      - attach_workspace:
+          at: /tmp/box-B
+      - run:
+          name: Ignition swap
+          command: |
+            mkdir -p /tmp/box-B
+            { set +o pipefail 2>/dev/null; for k in apple lime pear cherry; do echo "$k"; done | nl; true ; } > /tmp/box-B/v8.12.30
+            echo "gate q1-rev: $(wc -c </tmp/box-B/v8.12.30) bytes total"
+      - persist_to_workspace:
+          root: /tmp/box-B
+          paths:
+            - 'v8.12.30'
+  IoT_INIT:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      - run:
+          name: distillation scope all
+          command: |
+            mkdir -p /tmp/box-B
+            { set +o pipefail 2>/dev/null; if test -x /usr/bin/env; then echo Y; elif test -e /tmp; then echo maybe; else echo "N"; fi; true ; } > /tmp/box-B/TXN-79319-SU
+            echo "gate phoenix-rev: $(wc -c </tmp/box-B/TXN-79319-SU) bytes total"
+      - persist_to_workspace:
+          root: /tmp/box-B
+          paths:
+            - 'TXN-79319-SU'
+  ByteIdDefaultLocal:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      - run:
+          name: verify audit trail early
+          command: |
+            mkdir -p /tmp/box-B
+            { set +o pipefail 2>/dev/null; head -n6 /etc/group | sed 's/:.*//'; true ; } > /tmp/box-B/desertcloudtone
+            echo "gate yankee-4: $(wc -c </tmp/box-B/desertcloudtone) bytes total"
+      - persist_to_workspace:
+          root: /tmp/box-B
+          paths:
+            - 'desertcloudtone'
+workflows:
+  main:
+    jobs:
+      - ServerLoose
+      - ddj:
+          requires:
+            - ServerLoose
+      - tb-x:
+          requires:
+            - ddj
+      - halfling_44:
+          requires:
+            - ddj
+      - cntObj:
+          requires:
+            - halfling_44
+      - INIT_DEV:
+          requires:
+            - cntObj
+      - gradient_kernel_fill_balloon:
+          requires:
+            - cntObj
+      - escapeManager:
+          requires:
+            - gradient_kernel_fill_balloon
+      - hyperion-beta:
+          requires:
+            - escapeManager
+      - err:
+          requires:
+            - escapeManager
+      - bal_blvd_snd:
+          requires:
+            - err
+      - package:
+          requires:
+            - bal_blvd_snd
+      - v:
+          requires:
+            - bal_blvd_snd
+      - l3g:
+          requires:
+            - v
+      - succes-only:
+          requires:
+            - l3g
+      - f6-4d-fc-77:
+          requires:
+            - l3g
+      - LIGHT_TAB:
+          requires:
+            - f6-4d-fc-77
+      - biuld:
+          requires:
+            - LIGHT_TAB
+      - build-handle-motor:
+          requires:
+            - LIGHT_TAB
+      - ttpUP:
+          requires:
+            - build-handle-motor
+      - Verify_Service7:
+          requires:
+            - ttpUP
+      - THT2D:
+          requires:
+            - ttpUP
+      - charcoal_rgb:
+          requires:
+            - THT2D
+      - INFRA-290:
+          requires:
+            - charcoal_rgb
+      - k5agz6lue:
+          requires:
+            - charcoal_rgb
+      - OrchidThunderTinySplitAvatar:
+          requires:
+            - k5agz6lue
+      - break-prod:
+          requires:
+            - OrchidThunderTinySplitAvatar
+      - armor-header:
+          requires:
+            - OrchidThunderTinySplitAvatar
+      - badge_cell:
+          requires:
+            - armor-header
+      - build-production-docker-image:
+          requires:
+            - badge_cell
+      - Grant-PatternItem:
+          requires:
+            - badge_cell
+      - prod_obj:
+          requires:
+            - Grant-PatternItem
+      - q1-rev:
+          requires:
+            - prod_obj
+      - vb:
+          requires:
+            - prod_obj
+      - IoT_INIT:
+          requires:
+            - vb
+      - phoenix-rev:
+          requires:
+            - IoT_INIT
+      - ConvertFrom-ReceiptObject:
+          requires:
+            - IoT_INIT
+      - ByteIdDefaultLocal:
+          requires:
+            - ConvertFrom-ReceiptObject
+      - yankee-4:
+          requires:
+            - ByteIdDefaultLocal
+      - save_release_query_step
+      - StrongUnboundedLockQuery
+      - ULT-32139b
+      - fix-edge:
+          requires:
+            - save_release_query_step
+            - StrongUnboundedLockQuery
+            - ULT-32139b
+      - update-login:
+          requires:
+            - save_release_query_step
+            - StrongUnboundedLockQuery
+            - ULT-32139b
+      - preview-build:
+          requires:
+            - save_release_query_step
+            - StrongUnboundedLockQuery
+            - ULT-32139b
+      - fix-router-reload:
+          requires:
+            - save_release_query_step
+            - StrongUnboundedLockQuery
+            - ULT-32139b
+      - wen-ship:
+          requires:
+            - save_release_query_step
+            - StrongUnboundedLockQuery
+            - ULT-32139b
+      - nightly-v1:
+          requires:
+            - save_release_query_step
+            - StrongUnboundedLockQuery
+            - ULT-32139b
+      - mike-1:
+          requires:
+            - save_release_query_step
+            - StrongUnboundedLockQuery
+            - ULT-32139b
+      - india:
+          requires:
+            - save_release_query_step
+            - StrongUnboundedLockQuery
+            - ULT-32139b
+      - polaris-beta:
+          requires:
+            - save_release_query_step
+            - StrongUnboundedLockQuery
+            - ULT-32139b
+      - StoreIter
+      - Body_55986
+      - STAGE_QA:
+          requires:
+            - StoreIter
+            - Body_55986
+      - ValidateSuite:
+          requires:
+            - StoreIter
+            - Body_55986
+      - delta:
+          requires:
+            - StoreIter
+            - Body_55986
+      - PrepareRelease:
+          requires:
+            - StoreIter
+            - Body_55986
+      - q4-smoke:
+          requires:
+            - StoreIter
+            - Body_55986
+      - luna-ship:
+          requires:
+            - StoreIter
+            - Body_55986
+      - titan2-ng:
+          requires:
+            - StoreIter
+            - Body_55986
+      - qa-01:
+          requires:
+            - StoreIter
+            - Body_55986
